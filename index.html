@@ -123,12 +123,34 @@
 		}
 
 		/* no two books on a real shelf stand the same */
-		.book:nth-child(3n) { min-height: 11em; }
-		.book:nth-child(5n + 1) { min-height: 13em; }
-		.book:nth-child(7n + 2) { min-height: 10em; }
-		.book:nth-child(4n + 1) { transform: rotate(1.6deg); }
-		.book:nth-child(6n + 4) { transform: rotate(-2deg); }
-		.book:nth-child(9n + 5) { transform: rotate(2.4deg); }
+		.bookshelf > .book:nth-child(3n) { min-height: 11em; }
+		.bookshelf > .book:nth-child(5n + 1) { min-height: 13em; }
+		.bookshelf > .book:nth-child(7n + 2) { min-height: 10em; }
+		.bookshelf > .book:nth-child(4n + 1) { transform: rotate(1.6deg); }
+		.bookshelf > .book:nth-child(6n + 4) { transform: rotate(-2deg); }
+		.bookshelf > .book:nth-child(9n + 5) { transform: rotate(2.4deg); }
+
+		/* english books lie flat in piles — horizontal titles are easier to read */
+		.stack {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2px;
+			flex: none;
+		}
+
+		.book.flat {
+			writing-mode: horizontal-tb;
+			min-height: 0;
+			max-height: none;
+			max-width: 15em;
+			padding: 0.4em 0.8em;
+		}
+
+		/* piles are never tidy either */
+		.stack .book.flat:nth-child(2n) { max-width: 12.5em; transform: rotate(1.2deg); }
+		.stack .book.flat:nth-child(3n) { max-width: 13.5em; transform: rotate(-1.5deg) translateX(3px); }
+		.stack .book.flat:nth-child(4n + 1) { transform: rotate(-0.8deg) translateX(-2px); }
 
 		.year {
 			writing-mode: vertical-rl;
@@ -163,6 +185,20 @@
 		<div>
 			<h3>teaching</h3>
 			<p>i taught info30006 information security at unimelb and it was such fun</p>
+		</div>
+		<div>
+			<h3>papers</h3>
+			<ul>
+				<li><a
+						href="https://www.researchgate.net/publication/396451878_Autonomous_Data_Scientist_ADaS_A_Practical_Example_of_the_Future_Role_of_AI_in_Cybersecurity">autonomous
+						data scientist (ADaS): a practical example of the future role of AI in cybersecurity</a>
+					(IEEE LCN 2025)<br>
+					simone f. green, abigail nelson, zimo zhang, <b>aimee liang</b>, jeffrey chavis,
+					andrael velez-cevallos, yinzhi cao, lanier watkins</li>
+				<li>interviewplayground: predicting the performance of AI interviewers with participant simulations
+					(incoming)<br>
+					jonathan ivey, <b>aimee liang</b>, arthur wang, maddie mandell, ziang xiao, anjalie field</li>
+			</ul>
 		</div>
 		<div id="reading">
 			<h3>reading</h3>
@@ -203,8 +239,10 @@
 				shelf scrolls &rarr;)
 			<section class="bookshelf">
 				<span class="year">2026</span>
-				<a class="book" title="counselling for toads" href="https://www.goodreads.com/book/show/39223881">counselling for toads</a>
-				<a class="book" title="ace — angela chen" href="https://www.goodreads.com/search?q=Ace+Angela+Chen">ace — angela chen</a>
+				<span class="stack">
+					<a class="book flat" title="counselling for toads" href="https://www.goodreads.com/book/show/39223881">counselling for toads</a>
+					<a class="book flat" title="ace — angela chen" href="https://www.goodreads.com/search?q=Ace+Angela+Chen">ace — angela chen</a>
+				</span>
 				<span class="year">2024</span>
 				<a class="book" title="乡土中国" href="https://search.douban.com/book/subject_search?search_text=乡土中国+费孝通">乡土中国</a>
 				<a class="book" title="欧亨利短篇小说精选" href="https://search.douban.com/book/subject_search?search_text=欧亨利短篇小说精选+果麦">欧亨利短篇小说精选</a>
@@ -212,10 +250,12 @@
 				<a class="book" title="纵乐的困惑" href="https://search.douban.com/book/subject_search?search_text=纵乐的困惑+卜正民">纵乐的困惑</a>
 				<a class="book" title="哈佛前1%的秘密" href="https://search.douban.com/book/subject_search?search_text=哈佛前1%25的秘密">哈佛前1%的秘密</a>
 				<a class="book" title="置身事内" href="https://search.douban.com/book/subject_search?search_text=置身事内+兰小欢">置身事内</a>
-				<a class="book" title="little soldiers — lenora chu" href="https://www.goodreads.com/search?q=Little+Soldiers+Lenora+Chu">little soldiers — lenora chu</a>
-				<a class="book" title="this is marketing — seth godin" href="https://www.goodreads.com/search?q=This+Is+Marketing+Seth+Godin">this is marketing — seth godin</a>
-				<a class="book" title="animal farm — george orwell" href="https://www.goodreads.com/search?q=Animal+Farm+Orwell">animal farm — george orwell</a>
-				<a class="book" title="elon musk — ashlee vance" href="https://www.goodreads.com/search?q=Elon+Musk+Ashlee+Vance">elon musk — ashlee vance</a>
+				<span class="stack">
+					<a class="book flat" title="little soldiers — lenora chu" href="https://www.goodreads.com/search?q=Little+Soldiers+Lenora+Chu">little soldiers — lenora chu</a>
+					<a class="book flat" title="this is marketing — seth godin" href="https://www.goodreads.com/search?q=This+Is+Marketing+Seth+Godin">this is marketing — seth godin</a>
+					<a class="book flat" title="animal farm — george orwell" href="https://www.goodreads.com/search?q=Animal+Farm+Orwell">animal farm — george orwell</a>
+					<a class="book flat" title="elon musk — ashlee vance" href="https://www.goodreads.com/search?q=Elon+Musk+Ashlee+Vance">elon musk — ashlee vance</a>
+				</span>
 				<a class="book" title="什么样的爱值得勇敢一次" href="https://search.douban.com/book/subject_search?search_text=什么样的爱值得勇敢一次+沈奕斐">什么样的爱值得勇敢一次</a>
 				<a class="book" title="李诞工作手册" href="https://search.douban.com/book/subject_search?search_text=李诞工作手册">李诞工作手册</a>
 				<span class="year">2023</span>
@@ -224,15 +264,17 @@
 				<a class="book" title="我常常高兴" href="https://search.douban.com/book/subject_search?search_text=我常常高兴">我常常高兴</a>
 				<span class="year">2022</span>
 				<a class="book" title="外婆的道歉信" href="https://search.douban.com/book/subject_search?search_text=外婆的道歉信">外婆的道歉信</a>
-				<a class="book" title="绝对笑喷之弃业医生日志" href="https://search.douban.com/book/subject_search?search_text=绝对笑喷之弃业医生日志">绝对笑喷之弃业医生日志</a>
-				<a class="book" title="factfulness — hans rosling" href="https://www.goodreads.com/search?q=Factfulness+Hans+Rosling">factfulness — hans rosling</a>
+				<span class="stack">
+					<a class="book flat" title="this is going to hurt — adam kay" href="https://www.goodreads.com/search?q=This+Is+Going+to+Hurt+Adam+Kay">this is going to hurt — adam kay</a>
+					<a class="book flat" title="factfulness — hans rosling" href="https://www.goodreads.com/search?q=Factfulness+Hans+Rosling">factfulness — hans rosling</a>
+					<a class="book flat" title="what we talk about when we talk about love — raymond carver" href="https://www.goodreads.com/search?q=What+We+Talk+About+When+We+Talk+About+Love+Carver">what we talk about when we talk about love — raymond carver</a>
+					<a class="book flat" title="never eat alone, expanded — keith ferrazzi" href="https://www.goodreads.com/search?q=Never+Eat+Alone+Keith+Ferrazzi">never eat alone, expanded — keith ferrazzi</a>
+				</span>
 				<a class="book" title="影响力（湛庐经典）" href="https://search.douban.com/book/subject_search?search_text=影响力+西奥迪尼+湛庐">影响力（湛庐经典）</a>
 				<a class="book" title="梁永安：阅读、游历和爱情" href="https://search.douban.com/book/subject_search?search_text=梁永安+阅读+游历和爱情">梁永安：阅读、游历和爱情</a>
-				<a class="book" title="what we talk about when we talk about love — raymond carver" href="https://www.goodreads.com/search?q=What+We+Talk+About+When+We+Talk+About+Love+Carver">what we talk about when we talk about love — raymond carver</a>
 				<a class="book" title="清单革命" href="https://search.douban.com/book/subject_search?search_text=清单革命+葛文德">清单革命</a>
 				<a class="book" title="遗愿清单：一个临终关怀工作者的手记" href="https://search.douban.com/book/subject_search?search_text=遗愿清单+临终关怀工作者的手记">遗愿清单：一个临终关怀工作者的手记</a>
 				<a class="book" title="别独自用餐" href="https://search.douban.com/book/subject_search?search_text=别独自用餐+法拉奇">别独自用餐</a>
-				<a class="book" title="never eat alone, expanded — keith ferrazzi" href="https://www.goodreads.com/search?q=Never+Eat+Alone+Keith+Ferrazzi">never eat alone, expanded — keith ferrazzi</a>
 				<span class="year">2021</span>
 				<a class="book" title="翻转课堂的可汗学院" href="https://search.douban.com/book/subject_search?search_text=翻转课堂的可汗学院">翻转课堂的可汗学院</a>
 				<span class="year">2020</span>
