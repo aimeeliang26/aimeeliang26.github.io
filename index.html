@@ -110,7 +110,7 @@
 			padding: 0.7em 0.4em;
 			font-size: 0.85em;
 			min-height: 9em;
-			max-height: 16em;
+			max-height: 17.5em;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
@@ -120,6 +120,12 @@
 		a.book:hover {
 			color: rgb(198, 129, 255);
 			border-color: rgb(198, 129, 255);
+		}
+
+		/* long titles don't get cut off, they just make for a fatter book */
+		.book.long {
+			white-space: normal;
+			text-overflow: clip;
 		}
 
 		/* no two books on a real shelf stand the same */
@@ -170,7 +176,7 @@
 			<h1>h1</h1>
 			<h2>i'm aimee liang</h2>
 
-			<p>currently i'm a 2nd year master's student @ johns hopkins university. previously i did a bachelor of
+			<p>currently i'm a 2nd year masters student @ johns hopkins university. previously i did a bachelor of
 				computing and software systems @ university of melbourne
 			<p>worked as a consultant @ deloitte for almost two years before i went on to do my masters
 			<p>worked as a JCCIB Fellow with Sen Katie Hester in the Maryland State Senate
@@ -244,13 +250,16 @@
 					<a class="book flat" title="counselling for toads" href="https://www.goodreads.com/book/show/39223881">counselling for toads</a>
 					<a class="book flat" title="ace — angela chen" href="https://www.goodreads.com/search?q=Ace+Angela+Chen">ace — angela chen</a>
 				</span>
+				
 				<span class="year">2024</span>
-				<a class="book" title="乡土中国" href="https://search.douban.com/book/subject_search?search_text=乡土中国+费孝通">乡土中国</a>
-				<a class="book" title="欧亨利短篇小说精选" href="https://search.douban.com/book/subject_search?search_text=欧亨利短篇小说精选+果麦">欧亨利短篇小说精选</a>
+				<span class="stack">
+					<a class="book flat" title="from the soil: the foundations of chinese society" href="https://www.goodreads.com/search?q=From+the+Soil+Fei+Xiaotong">from the soil</a>
+					<a class="book flat" title="o. henry selected stories" href="https://www.goodreads.com/search?q=O.+Henry+Selected+Stories">o. henry selected stories</a>
+					<a class="book flat" title="the confusions of pleasure: commerce and culture in ming china — timothy brook" href="https://www.goodreads.com/search?q=The+Confusions+of+Pleasure+Timothy+Brook">the confusions of pleasure</a>
+					<a class="book flat" title="how china works: an introduction to china's state-led economic development — lan xiaohuan · 置身事内" href="https://www.goodreads.com/search?q=How+China+Works+Lan+Xiaohuan">how china works</a>
+				</span>
 				<a class="book" title="财经 2024年第24期" href="https://search.douban.com/book/subject_search?search_text=财经+杂志">财经 2024年第24期</a>
-				<a class="book" title="纵乐的困惑" href="https://search.douban.com/book/subject_search?search_text=纵乐的困惑+卜正民">纵乐的困惑</a>
 				<a class="book" title="哈佛前1%的秘密" href="https://search.douban.com/book/subject_search?search_text=哈佛前1%25的秘密">哈佛前1%的秘密</a>
-				<a class="book" title="置身事内" href="https://search.douban.com/book/subject_search?search_text=置身事内+兰小欢">置身事内</a>
 				<span class="stack">
 					<a class="book flat" title="little soldiers — lenora chu" href="https://www.goodreads.com/search?q=Little+Soldiers+Lenora+Chu">little soldiers — lenora chu</a>
 					<a class="book flat" title="this is marketing — seth godin" href="https://www.goodreads.com/search?q=This+Is+Marketing+Seth+Godin">this is marketing — seth godin</a>
@@ -259,42 +268,49 @@
 				</span>
 				<a class="book" title="什么样的爱值得勇敢一次" href="https://search.douban.com/book/subject_search?search_text=什么样的爱值得勇敢一次+沈奕斐">什么样的爱值得勇敢一次</a>
 				<a class="book" title="李诞工作手册" href="https://search.douban.com/book/subject_search?search_text=李诞工作手册">李诞工作手册</a>
+				
 				<span class="year">2023</span>
 				<a class="book" title="遇到百分之百的女孩" href="https://search.douban.com/book/subject_search?search_text=遇到百分之百的女孩+村上春树">遇到百分之百的女孩</a>
-				<a class="book" title="小径分岔的花园" href="https://search.douban.com/book/subject_search?search_text=小径分岔的花园+博尔赫斯">小径分岔的花园</a>
-				<a class="book" title="我常常高兴" href="https://search.douban.com/book/subject_search?search_text=我常常高兴">我常常高兴</a>
-				<span class="year">2022</span>
-				<a class="book" title="外婆的道歉信" href="https://search.douban.com/book/subject_search?search_text=外婆的道歉信">外婆的道歉信</a>
 				<span class="stack">
+					<a class="book flat" title="the garden of forking paths — jorge luis borges" href="https://www.goodreads.com/search?q=The+Garden+of+Forking+Paths+Borges">the garden of forking paths</a>
+					<a class="book flat" title="often i am happy — jens christian grøndahl · 我常常高兴" href="https://www.goodreads.com/search?q=Often+I+Am+Happy+Grondahl">often i am happy</a>
+				</span>
+
+				<span class="year">2022</span>
+				<span class="stack">
+					<a class="book long" title="my grandmother asked me to tell you she's sorry — fredrik backman · 外婆的道歉信" href="https://www.goodreads.com/search?q=My+Grandmother+Asked+Me+to+Tell+You+She%27s+Sorry">my grandmother asked me to tell you she's sorry</a>
 					<a class="book flat" title="this is going to hurt — adam kay" href="https://www.goodreads.com/search?q=This+Is+Going+to+Hurt+Adam+Kay">this is going to hurt — adam kay</a>
 					<a class="book flat" title="factfulness — hans rosling" href="https://www.goodreads.com/search?q=Factfulness+Hans+Rosling">factfulness — hans rosling</a>
 					<a class="book flat" title="what we talk about when we talk about love — raymond carver" href="https://www.goodreads.com/search?q=What+We+Talk+About+When+We+Talk+About+Love+Carver">what we talk about when we talk about love — raymond carver</a>
 					<a class="book flat" title="never eat alone, expanded — keith ferrazzi" href="https://www.goodreads.com/search?q=Never+Eat+Alone+Keith+Ferrazzi">never eat alone, expanded — keith ferrazzi</a>
 				</span>
-				<a class="book" title="影响力（湛庐经典）" href="https://search.douban.com/book/subject_search?search_text=影响力+西奥迪尼+湛庐">影响力（湛庐经典）</a>
 				<a class="book" title="梁永安：阅读、游历和爱情" href="https://search.douban.com/book/subject_search?search_text=梁永安+阅读+游历和爱情">梁永安：阅读、游历和爱情</a>
-				<a class="book" title="清单革命" href="https://search.douban.com/book/subject_search?search_text=清单革命+葛文德">清单革命</a>
 				<a class="book" title="遗愿清单：一个临终关怀工作者的手记" href="https://search.douban.com/book/subject_search?search_text=遗愿清单+临终关怀工作者的手记">遗愿清单：一个临终关怀工作者的手记</a>
-				<a class="book" title="别独自用餐" href="https://search.douban.com/book/subject_search?search_text=别独自用餐+法拉奇">别独自用餐</a>
+
+				<span class="stack">
+					<a class="book flat" title="influence: the psychology of persuasion — robert cialdini · 影响力" href="https://www.goodreads.com/search?q=Influence+The+Psychology+of+Persuasion+Cialdini">influence — cialdini</a>
+					<a class="book flat" title="the checklist manifesto — atul gawande · 清单革命" href="https://www.goodreads.com/search?q=The+Checklist+Manifesto+Gawande">the checklist manifesto</a>
+
+				</span>
+				<a class="book flat" title="never eat alone — keith ferrazzi · 别独自用餐" href="https://www.goodreads.com/search?q=Never+Eat+Alone+Keith+Ferrazzi">never eat alone</a>
 				<span class="year">2021</span>
-				<a class="book" title="翻转课堂的可汗学院" href="https://search.douban.com/book/subject_search?search_text=翻转课堂的可汗学院">翻转课堂的可汗学院</a>
+				<a class="book flat" title="the one world schoolhouse: education reimagined — salman khan · 翻转课堂的可汗学院" href="https://www.goodreads.com/search?q=The+One+World+Schoolhouse+Salman+Khan">the one world schoolhouse</a>
 				<span class="year">2020</span>
-				<a class="book" title="好好学习" href="https://search.douban.com/book/subject_search?search_text=好好学习+成甲">好好学习</a>
-				<a class="book" title="当呼吸化为空气" href="https://search.douban.com/book/subject_search?search_text=当呼吸化为空气">当呼吸化为空气</a>
-				<a class="book" title="这样读书就够了" href="https://search.douban.com/book/subject_search?search_text=这样读书就够了+赵周">这样读书就够了</a>
-				<a class="book" title="思考的技术" href="https://search.douban.com/book/subject_search?search_text=思考的技术+大前研一">思考的技术</a>
-				<a class="book" title="你不是迷茫，而是自制力不强" href="https://search.douban.com/book/subject_search?search_text=你不是迷茫而是自制力不强">你不是迷茫，而是自制力不强</a>
-				<a class="book" title="富爸爸穷爸爸" href="https://search.douban.com/book/subject_search?search_text=富爸爸穷爸爸">富爸爸穷爸爸</a>
-				<a class="book" title="如何结交比你更优秀的人" href="https://search.douban.com/book/subject_search?search_text=如何结交比你更优秀的人">如何结交比你更优秀的人</a>
-				<a class="book" title="一生的旅程：迪士尼CEO自述" href="https://search.douban.com/book/subject_search?search_text=一生的旅程+迪士尼CEO">一生的旅程：迪士尼CEO自述</a>
-				<a class="book" title="被讨厌的勇气" href="https://search.douban.com/book/subject_search?search_text=被讨厌的勇气+岸见一郎">被讨厌的勇气</a>
-				<a class="book" title="娱乐至死" href="https://search.douban.com/book/subject_search?search_text=娱乐至死+波兹曼">娱乐至死</a>
-				<a class="book" title="如何高效学习" href="https://search.douban.com/book/subject_search?search_text=如何高效学习+斯科特·扬">如何高效学习</a>
-				<a class="book" title="最好的告别" href="https://search.douban.com/book/subject_search?search_text=最好的告别+葛文德">最好的告别</a>
-				<a class="book" title="小狗钱钱" href="https://search.douban.com/book/subject_search?search_text=小狗钱钱">小狗钱钱</a>
-				<a class="book" title="彼得的老房子" href="https://search.douban.com/book/subject_search?search_text=彼得的老房子">彼得的老房子</a>
-				<a class="book" title="人生的智慧" href="https://search.douban.com/book/subject_search?search_text=人生的智慧+叔本华">人生的智慧</a>
-				<a class="book" title="你要如何衡量你的人生" href="https://search.douban.com/book/subject_search?search_text=你要如何衡量你的人生">你要如何衡量你的人生</a>
+				<a class="book flat" title="好好学习" href="https://search.douban.com/book/subject_search?search_text=好好学习+成甲">好好学习</a>
+				<a class="book flat" title="when breath becomes air — paul kalanithi · 当呼吸化为空气" href="https://www.goodreads.com/search?q=When+Breath+Becomes+Air+Kalanithi">when breath becomes air</a>
+				<a class="book flat" title="这样读书就够了" href="https://search.douban.com/book/subject_search?search_text=这样读书就够了+赵周">这样读书就够了</a>
+				<a class="book flat" title="思考的技术" href="https://search.douban.com/book/subject_search?search_text=思考的技术+大前研一">思考的技术</a>
+				<a class="book flat" title="rich dad poor dad — robert kiyosaki · 富爸爸穷爸爸" href="https://www.goodreads.com/search?q=Rich+Dad+Poor+Dad+Kiyosaki">rich dad poor dad</a>
+				<a class="book flat" title="如何结交比你更优秀的人" href="https://search.douban.com/book/subject_search?search_text=如何结交比你更优秀的人">如何结交比你更优秀的人</a>
+				<a class="book flat" title="the ride of a lifetime — robert iger · 一生的旅程：迪士尼CEO自述" href="https://www.goodreads.com/search?q=The+Ride+of+a+Lifetime+Robert+Iger">the ride of a lifetime</a>
+				<a class="book flat" title="the courage to be disliked — ichiro kishimi &amp; fumitake koga · 被讨厌的勇气" href="https://www.goodreads.com/search?q=The+Courage+to+Be+Disliked+Kishimi">the courage to be disliked</a>
+				<a class="book flat" title="amusing ourselves to death — neil postman · 娱乐至死" href="https://www.goodreads.com/search?q=Amusing+Ourselves+to+Death+Postman">amusing ourselves to death</a>
+				<a class="book flat" title="learn more, study less — scott h. young · 如何高效学习" href="https://www.goodreads.com/search?q=Learn+More+Study+Less+Scott+Young">learn more, study less</a>
+				<a class="book flat" title="being mortal — atul gawande · 最好的告别" href="https://www.goodreads.com/search?q=Being+Mortal+Gawande">being mortal</a>
+				<a class="book flat" title="a dog named money — bodo schäfer · 小狗钱钱" href="https://www.goodreads.com/search?q=Bodo+Schafer+dog+named+Money">a dog named money</a>
+				<a class="book flat" title="peter's old house — elsa beskow · 彼得的老房子" href="https://www.goodreads.com/search?q=Peter%27s+Old+House+Elsa+Beskow">peter's old house</a>
+				<a class="book flat" title="the wisdom of life — arthur schopenhauer · 人生的智慧" href="https://www.goodreads.com/search?q=The+Wisdom+of+Life+Schopenhauer">the wisdom of life</a>
+				<a class="book long" title="how will you measure your life? — clayton christensen · 你要如何衡量你的人生" href="https://www.goodreads.com/search?q=How+Will+You+Measure+Your+Life+Christensen">how will you measure your life?</a>
 			</section>
 		</div>
 		<div>
@@ -316,8 +332,7 @@
 		<div>
 			<h3>thanks</h3>
 			<p>here i get to practice gratitude to people who have taken me places. it's also a work in progress!
-			<p>thanks to: <a href="https://shaananc.github.io/">shaanan cohney</a>, my friends, family, my brother evan,
-				and costco for their red panda giant plushie...</p>
+			<p>thanks to: <a href="https://shaananc.github.io/">shaanan cohney</a>, my friends, family, my brother evan...</p>
 			<br>
 			<p>thanks for stopping by, have a nice day!</p>
 		</div>
